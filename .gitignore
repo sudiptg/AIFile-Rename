@@ -1,0 +1,11 @@
+# secrets and runtime data - never commit these
+.env
+data/
+downloads/
+*.bak
+*.tmp
+__pycache__/
+*.pyc
+*.session
+*.session-journal
+venv/

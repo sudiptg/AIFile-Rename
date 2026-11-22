@@ -1,0 +1,7 @@
+# pyrotgfork provides the "pyrogram" module with native coloured buttons and the video "cover" feature.
+# Never install it together with pyrofork / pyrogram (they use the same module name).
+pyrotgfork>=2.1.22
+tgcrypto
+aiohttp
+psutil
+pymongo>=4.13

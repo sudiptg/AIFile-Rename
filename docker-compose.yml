@@ -1,0 +1,11 @@
+services:
+  autorename-bot:
+    build: .
+    container_name: autorename-bot
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATA_DIR: /data
+      DOWNLOAD_DIR: /data/downloads
+    volumes:
+      - ./data:/data        # database.json lives here and survives updates / rebuilds
