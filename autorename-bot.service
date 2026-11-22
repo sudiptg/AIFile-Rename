@@ -1,0 +1,19 @@
+[Unit]
+Description=Auto-Rename Telegram Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=autorename
+Group=autorename
+WorkingDirectory=/opt/autorename-bot
+EnvironmentFile=/opt/autorename-bot/.env
+ExecStart=/opt/autorename-bot/venv/bin/python main.py
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
